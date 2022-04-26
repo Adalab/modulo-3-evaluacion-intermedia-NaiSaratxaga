@@ -8,16 +8,35 @@ function App() {
   const [search, setSearch] = useState('');
   const [select, setSelect] = useState('');
 
-  const handleData = (ev) => {
-    const textFilter = ev.target.value;
-    setData(data.filter((phrase) => phrase.quote.includes(textFilter)));
+  const filterPhrasesByText = (ev) => {
+    const textToFilter = ev.target.value.toLowerCase();
+    const filteredPhrases = phrasesList.filter((phrasesList) =>
+      phrasesList.quote.toLowerCase().includes(textToFilter)
+    );
+    setData(filteredPhrases);
   };
 
-  const handleSelect = (ev) => {
-    setSelect(ev.target.value);
+  const filterPhrasesByCharacter = (ev) => {
+    if (!ev.target.value) {
+      setData(phrasesList);
+    } else {
+      const selectedCharacter = ev.target.value.toLowerCase();
+      const filteredPhrases = phrasesList.filter(
+        (phrasesList) =>
+          phrasesList.character.toLowerCase() === selectedCharacter
+      );
+      setData(filteredPhrases);
+    }
   };
 
-  const phrasesCards = data.map((phrase, i) => <li key={i}>{phrase.quote}</li>);
+  const phrasesCards = data.map((phrase, i) => {
+    return (
+      <li key={i}>
+        <p>{phrase.quote}</p>
+        <p>{phrase.character}</p>
+      </li>
+    );
+  });
 
   return (
     <div className='App'>
@@ -30,16 +49,19 @@ function App() {
             type='search'
             name='search'
             placeholder='Filtrar por frase'
-            onChange={handleData}
+            onChange={filterPhrasesByText}
           />
-          <select name='Filtrar por personaje' onChange={handleSelect}>
+          <select
+            name='Filtrar por personaje'
+            onChange={filterPhrasesByCharacter}
+          >
             <option>Filtrar por personaje</option>
-            <option>Ross</option>
-            <option>Mónica</option>
-            <option>Joey</option>
-            <option>Phoebe</option>
-            <option>Chandler</option>
-            <option>Phoebe</option>
+            <option value='Ross'>Ross</option>
+            <option value='Mónica'>Mónica</option>
+            <option value='Joey'>Joey</option>
+            <option value='Phoebe'>Phoebe</option>
+            <option value='Chandler'>Chandler</option>
+            <option value='Phoebe'>Phoebe</option>
           </select>
         </form>
       </header>

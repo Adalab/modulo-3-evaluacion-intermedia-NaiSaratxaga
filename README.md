@@ -66,7 +66,7 @@ Para filtrar por frase:
 - Añade la funcionalidad para que cuando la usuaria cambie este select el listado de frases se repinte
   mostrando solo los que coincidan con la opción seleccionada.
 
-**Más pistas, esta vez sobre ese \***<Input>**_ y ese _**<Select>\*\*\*:
+#### Más pistas, esta vez sobre ese **Input** y ese **Select**:
 
 - ¿Vas a guardar los datos del select en algún sitio? ¿y del input?
 - ¿Qué tipo de datos vas a guardar?
@@ -82,7 +82,9 @@ Y siempre que filtramos algo debemos hacernos las preguntas:
 
 ### 4º Maqueta a tu gusto (bonus)
 
-## Poner bonita tu web aplicando estilos.
+Poner bonita tu web aplicando estilos.
+
+---
 
 ### Dónde se puede ver 👀
 
@@ -99,7 +101,9 @@ Y siempre que filtramos algo debemos hacernos las preguntas:
 <a href="https://sass-lang.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/>
 <a href="https://github.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt=“github” width="40" height="40"/> </a> 
 </p>
+
 ---
+
 #### Guía para arrancar el proyecto
 
 > **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) para trabajar con este Starter Kit.

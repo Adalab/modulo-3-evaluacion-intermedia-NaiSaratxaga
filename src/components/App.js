@@ -1,17 +1,16 @@
-import { useEffect, useState } from 'react';
 import '../styles/App.scss';
 import '../styles/core/reset.scss';
-import data from '../data/data.json';
+
+import { useEffect, useState } from 'react';
 import getQuotes from '../services/fetch';
 import ls from '../services/localStorage';
 import logo from '../images/logo.png';
 
 const App = () => {
+  // Las quotes que vienen de la API
   const [quotes, setQuotes] = useState(ls.get('quotes', []));
 
-  const [quote, setQuote] = useState('');
-  const [character, setCharacter] = useState('');
-
+  // Objeto con la combinacion de ambos filtros a aplicar
   const [quoteObject, setQuoteObject] = useState({
     quote: '',
     character: '',
@@ -28,13 +27,6 @@ const App = () => {
     }
   }, []);
 
-  const handleQuote = (ev) => {
-    setQuote(ev.target.value);
-  };
-  const handleCharacter = (ev) => {
-    setCharacter(ev.target.value);
-  };
-
   const handleInputs = (ev) => {
     setQuoteObject({
       ...quoteObject,
@@ -47,6 +39,9 @@ const App = () => {
     const newQuotes = [...quotes, quoteObject];
     ls.set('quotes', newQuotes);
     setQuotes(newQuotes);
+    // Reset form
+    setFilterQuote('');
+    setFilterCharacter('all');
   };
 
   const handleFilterQuote = (ev) => {
@@ -57,13 +52,8 @@ const App = () => {
     setFilterCharacter(ev.target.value);
   };
 
-  const handleRemoveBtn = (ev) => {
-    ev.preventDefault();
-  };
-
   const htmlData = quotes
     .filter((item) => {
-      //true or false
       if (filterCharacter === 'all') {
         return true;
       } else if (filterCharacter === item.character) {
@@ -71,8 +61,6 @@ const App = () => {
       } else {
         return false;
       }
-
-      //return item.character === filterCharacter;
     })
     .filter((item) => {
       return item.quote.toLowerCase().includes(filterQuote.toLowerCase());
@@ -155,9 +143,6 @@ const App = () => {
         </label>
         <button onClick={handleNewQuote} className='new-quote__btn'>
           Añadir un nueva frase
-        </button>
-        <button onClick={handleRemoveBtn} className='new-quote__reset'>
-          Reset
         </button>
       </form>
     </div>

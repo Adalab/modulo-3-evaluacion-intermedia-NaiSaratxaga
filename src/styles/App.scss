@@ -32,6 +32,9 @@ ul {
   }
 
   .filter {
+    display: flex;
+    align-items: center;
+
     &__select {
       margin-left: 0.1rem;
       padding: 0.25rem 0;
@@ -45,6 +48,20 @@ ul {
       &:hover {
         border: 1px solid #ddd;
       }
+    }
+
+    &__label {
+      display: block;
+    }
+
+    &__text {
+      display: inline-block;
+      width: 15rem;
+      margin-left: 1rem;
+    }
+
+    &__labelCharacter {
+      padding-left: 1rem;
     }
   }
 }
@@ -77,41 +94,27 @@ ul {
 }
 
 .new-quote {
+  &__title {
+    border-bottom: 1px solid #ddd;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 15px 0;
+    text-align: center;
+  }
+
   &__form {
-    margin-top: 4rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
 
-  &__title {
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #ddd;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-
-  &__label {
-    display: block;
-    margin-bottom: 0.75rem;
-
-    &-text {
-      display: inline-block;
-      width: 15rem;
-    }
-  }
-
   &__text {
-    padding: 0.15rem 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #666;
-    outline: none;
+    margin: 0 1rem;
   }
 
   &__btn {
-    padding: 0.25rem 1rem;
+    padding: 1rem;
     border-radius: 0.5rem;
     border: none;
     background-color: #3154a7;

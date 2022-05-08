@@ -31,60 +31,62 @@ A continuación queremos añadir un nueva frase. Para ello:
 - Crear un formulario con los campos:
   **Frase.**
   **Personaje**
-  Un botón para **Añadir** la nueva frase.
+
+Un botón para **Añadir** la nueva frase.
+
 - Cuando la usuaria pulse en el botón hay que añadir la frase al listado de frases para que este
   aparezca en el listado.
 
 Te queremos dar unas pistas en forma de preguntas. Antes de que la usuaria pulse en el botón de Añadir
 una nueva frase debes pensar:
 
-¿Vas a guardar los datos del formulario en algún sitio?
-¿Qué tipo de datos vas a guardar?
-¿Qué valores iniciales tienen estos datos?
+- ¿Vas a guardar los datos del formulario en algún sitio?
+- ¿Qué tipo de datos vas a guardar?
+- ¿Qué valores iniciales tienen estos datos?
 
 ### 3º Filtrar el listado de frases (bonus)
 
-A continuación queremos filtrar las alumnas por nombre y por tutora. Intenta hacer uno de los dos y,
-cuando lo tengas controlado, implementa el restante. Para ello:
 Para filtrar por frase:
-. Añade un recuadro sobre el listado de frases donde la usuaria pueda escribir texto.
-. Añade la funcionalidad para que, cuando la usuaria escriba en ese <input>, el listado de frases se
-re-pinte mostrando solo las que incluyan el texto que ha escrito la usuaria (aplicando también el
-filtrado por personaje, si ya lo tuvieras implementado).
 
-Para filtrar por personaje:
-. Añade un select a la cabecera que tenga las siguientes opciones:
-Todos
-Ross
-Monica
-Joey
-Phoebe
-Chandler
-Rachel
-. Añade la funcionalidad para que cuando la usuaria cambie este select el listado de frases se repinte
-mostrando solo los que coincidan con la opción seleccionada.
+- Añade un recuadro sobre el listado de frases donde la usuaria pueda escribir texto.
+- Añade la funcionalidad para que, cuando la usuaria escriba en ese <input>, el listado de frases se
+  re-pinte mostrando solo las que incluyan el texto que ha escrito la usuaria (aplicando también el
+  filtrado por personaje, si ya lo tuvieras implementado).
 
-Más pistas, esta vez sobre ese <input> y ese <select>:
-¿Vas a guardar los datos del select en algún sitio? ¿y del input?
-¿Qué tipo de datos vas a guardar?
-¿Qué valor inicial le vas a poner?
+**_Para filtrar por personaje:_**
+
+- Añade un select a la cabecera que tenga las siguientes opciones:
+  **_Todos_**
+  **_Ross_**
+  **_Mónica_**
+  **_Joey_**
+  **_Phoebe_**
+  **_Chandler_**
+  **_Rachel_**
+- Añade la funcionalidad para que cuando la usuaria cambie este select el listado de frases se repinte
+  mostrando solo los que coincidan con la opción seleccionada.
+
+**Más pistas, esta vez sobre ese \***<Input>**_ y ese _**<Select>\*\*\*:
+
+- ¿Vas a guardar los datos del select en algún sitio? ¿y del input?
+- ¿Qué tipo de datos vas a guardar?
+- ¿Qué valor inicial le vas a poner?
+
 Y siempre que filtramos algo debemos hacernos las preguntas:
 
-¿Qué datos de cada frase tienes que comparar con la opción seleccionada por la usuaria, para saber
-si una frase cumple o no con el filtro?
-¿Hay alguna opción del select con la que deba mostrar todos las frases?
-¿Hay alguna opción del select con la que no deba mostrar ninguna frase?
-¿Debo guardar las frases flitradas en algún sitio o puedo calcularlos al vuelo?
+- ¿Qué datos de cada frase tienes que comparar con la opción seleccionada por la usuaria, para saber
+- si una frase cumple o no con el filtro?
+- ¿Hay alguna opción del select con la que deba mostrar todos las frases?
+- ¿Hay alguna opción del select con la que no deba mostrar ninguna frase?
+- ¿Debo guardar las frases flitradas en algún sitio o puedo calcularlos al vuelo?
 
 ### 4º Maqueta a tu gusto (bonus)
 
-No te vamos a decir cómo debes poner bonita tu web porque tienes más estilo y flow que nosotras.
-
----
+## Poner bonita tu web aplicando estilos.
 
 ### Dónde se puede ver 👀
 
-### **[Friends]()**
+### **[Friends](http://beta.adalab.es/modulo-3-evaluacion-intermedia-NaiSaratxaga/)**
 
 ---
 
@@ -97,9 +99,7 @@ No te vamos a decir cómo debes poner bonita tu web porque tienes más estilo y 
 <a href="https://sass-lang.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/>
 <a href="https://github.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt=“github” width="40" height="40"/> </a> 
 </p>
-
 ---
-
 #### Guía para arrancar el proyecto
 
 > **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) para trabajar con este Starter Kit.

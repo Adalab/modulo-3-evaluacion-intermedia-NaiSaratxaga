@@ -10,7 +10,7 @@ const App = () => {
   // Las quotes que vienen de la API
   const [quotes, setQuotes] = useState(ls.get('quotes', []));
 
-  // Objeto con la combinacion de ambos filtros a aplicar
+  // Objeto con la combinación de ambos filtros a aplicar
   const [quoteObject, setQuoteObject] = useState({
     quote: '',
     character: '',

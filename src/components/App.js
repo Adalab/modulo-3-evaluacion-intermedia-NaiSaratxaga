@@ -57,6 +57,10 @@ const App = () => {
     setFilterCharacter(ev.target.value);
   };
 
+  const handleRemoveBtn = (ev) => {
+    ev.preventDefault();
+  };
+
   const htmlData = quotes
     .filter((item) => {
       //true or false
@@ -83,9 +87,14 @@ const App = () => {
     });
 
   return (
-    <div className='page'>
+    <div className='container'>
       <header className='header'>
-        <img src={logo} alt='logotipo' title='logotipo' />
+        <img
+          className='header__logo'
+          src={logo}
+          alt='logotipo'
+          title='logotipo'
+        />
         <h1 className='header__title'>Frases de Friends</h1>
         <form className='filter'>
           <label className='filter__label' htmlFor='character'>
@@ -146,6 +155,9 @@ const App = () => {
         </label>
         <button onClick={handleNewQuote} className='new-quote__btn'>
           Añadir un nueva frase
+        </button>
+        <button onClick={handleRemoveBtn} className='new-quote__reset'>
+          Reset
         </button>
       </form>
     </div>

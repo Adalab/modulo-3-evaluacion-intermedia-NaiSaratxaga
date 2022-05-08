@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
   font-size: 1rem;
   font-weight: normal;
@@ -13,7 +13,7 @@ ul {
   list-style: none;
 }
 
-.page {
+.container {
   padding: 1rem;
 }
 
@@ -22,12 +22,13 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
-  padding-bottom: 0.5rem;
   border-bottom: 1px solid #ddd;
-
+  &__logo {
+    width: 40rem;
+    margin-bottom: 0;
+  }
   &__title {
-    font-size: 1.5rem;
+    font-size: 4rem;
     font-weight: bold;
   }
 
@@ -37,7 +38,7 @@ ul {
       padding: 0.25rem 0;
       margin: 0.5rem;
       width: 15rem;
-      border: 1px solid #3154a7;
+      border: 2px solid #3154a7;
       border-radius: 5px;
       cursor: pointer;
       transition: all ease 0.25s;
@@ -62,7 +63,7 @@ ul {
     margin: 0 1rem 1rem 0;
     padding: 0.3rem;
     border-radius: 0.5rem;
-    border: 1px solid #ddd;
+    border: 2px solid #3154a7;
   }
 
   &__quote {
@@ -71,24 +72,8 @@ ul {
   }
   &__character {
     padding-bottom: 0.5rem;
-    color: #7cbb00;
+    color: #3154a7;
     font-size: 1.25rem;
-  }
-
-  &__remove-button {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    padding: 0 6px 2px;
-    border: none;
-    border-radius: 50%;
-    background-color: #f65314;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-    &:hover {
-      background-color: #ea4335;
-    }
   }
 }
 
@@ -133,8 +118,22 @@ ul {
     background-color: #3154a7;
     font-weight: bold;
     color: #fff;
+    cursor: pointer;
     &:hover {
-      background-color: #3154a7;
+      background-color: #b5bfd5;
+    }
+  }
+  &__reset {
+    padding: 0.25rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin: 1rem;
+    background-color: #dc29a0;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+      background-color: #d06fac;
     }
   }
 }
